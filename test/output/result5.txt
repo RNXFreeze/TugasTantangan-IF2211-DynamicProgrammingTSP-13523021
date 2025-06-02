@@ -1,5 +1,6 @@
 =============== Solver Result ===============
 Program Mode   : File Input
 File Input     : test/input/test5.txt
-Minimum Cost   : 170
+Execution Time : 13227.0 ms
+Minimum Cost   : 170 Cost
 Shortest Route : 1 -> 11 -> 15 -> 10 -> 7 -> 9 -> 20 -> 6 -> 5 -> 4 -> 2 -> 17 -> 19 -> 16 -> 3 -> 8 -> 13 -> 14 -> 18 -> 12 -> 1
