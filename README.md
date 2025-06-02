@@ -3,11 +3,11 @@ IF2211 - Strategi Algoritma - Tugas Tantangan Satu Malam - Dynamic Programming T
 
 ## About The Project
 <p align = "justify">
-Program ini adalah program implementasi untuk menyelesaikan permasalahan Travelling Salesman Problem (TSP) dengan menggunakan pendekatan Dynamic Programming (DP) seperti yang telah diajarkan pada mata kuliah Strategi Algoritma (IF2211-24) Tahun Akademik 2024/2025. Dynamic Programming (DP) merupakan metode umum dalam menyelesaikan suatu permasalahan kompleks dengan memecahnya menjadi beberapa submasalah yang lebih kecil dan disimpan untuk proses selanjutnya. Program ini akan berjalan di CLI Terminal dengan input yang diasumsikan valid berupa jumlah kota dan matriks ketetanggaan, serta outputnya berupa detail dari rute terpendeknya. Program ini diketik dengan menggunakan bahasa pemrograman Ruby sebagai salah satu tantangan dari tugas ini sekaligus dikerjakan dalam satu malam sebagai tantangan utamanya.</p>
+Program ini adalah program implementasi untuk menyelesaikan permasalahan Travelling Salesman Problem (TSP) dengan menggunakan pendekatan Dynamic Programming (DP) seperti yang telah diajarkan pada mata kuliah Strategi Algoritma (IF2211-24) Tahun Akademik 2024/2025. Program ini akan berjalan di CLI Terminal dengan input yang diasumsikan valid berupa jumlah kota dan matriks ketetanggaan, serta outputnya berupa detail dari rute terpendeknya. Program ini diketik dengan menggunakan bahasa pemrograman Ruby sebagai salah satu tantangan dari tugas ini sekaligus dikerjakan dalam satu malam sebagai tantangan utamanya.</p>
 
 ## About The Algorithm
 <p align = "justify">
-Dummy.</p>
+Dynamic Programming (DP) merupakan metode umum dalam menyelesaikan suatu permasalahan kompleks dengan memecahnya menjadi beberapa submasalah yang lebih kecil dan disimpan untuk proses selanjutnya. Algoritma solver membagi masalah TSP menjadi state (kota_terakhir , subset_kota_terkunjungi) dan menyimpan biayanya pada suatu tabel, sehingga setiap kombinasi dihitung sekali saja. Terdapat fungsi rekursif TSP menjelajah kota yang belum dikunjungi, kemudian memilih biaya minimum, dan merekam keputusan berikutnya di tabel lain untuk merekonstruksi rute. Setelah seluruh kombinasi yang mungkin terjadi telah diperhitungkan, algoritma akan menghasilkan solusi yang optimal, yaitu total jarak tur terpendek beserta urutan kunjungan kota‐kota yang merealisasikannya.</p>
 
 ## Project Feature
 - Solve Travelling Salesman Problem (TSP)
