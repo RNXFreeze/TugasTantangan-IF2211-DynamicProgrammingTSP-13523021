@@ -145,7 +145,7 @@ loop do
                     raise("Nama File Output Tidak Valid (Harus TXT & Tanpa Karakter Terlarang)")
                 end
                 output = "test/output/" + output_path
-                File.write(output , "=============== Solver Result ===============\nProgram Mode   : Keyboard Input\nMinimum Cost   : #{mcost}\nShortest Route : #{display_route.join(' -> ')}\city")
+                File.write(output , "=============== Solver Result ===============\nProgram Mode   : Keyboard Input\nMinimum Cost   : #{mcost}\nShortest Route : #{display_route.join(' -> ')}\n")
                 puts("Success : File Result Disimpan Di #{output}.")
             elsif (option.downcase == "city") then
                 nil
@@ -208,7 +208,7 @@ loop do
                     raise("Nama File Output Tidak Valid (Harus TXT & Tanpa Karakter Terlarang)")
                 end
                 output = "test/output/" + output_path
-                File.write(output , "=============== Solver Result ===============\nProgram Mode   : File Input\nFile Input     : #{input}\nMinimum Cost   : #{mcost}\nShortest Route : #{display_route.join(' -> ')}\city")
+                File.write(output , "=============== Solver Result ===============\nProgram Mode   : File Input\nFile Input     : #{input}\nMinimum Cost   : #{mcost}\nShortest Route : #{display_route.join(' -> ')}\n")
                 puts("Success : File Result Disimpan Di #{output}.")
             elsif (option.downcase == "city") then
                 nil
