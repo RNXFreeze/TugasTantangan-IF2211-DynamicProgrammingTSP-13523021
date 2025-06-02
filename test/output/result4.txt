@@ -1,0 +1,5 @@
+=============== Solver Result ===============
+Program Mode   : File Input
+File Input     : test/input/test4.txt
+Minimum Cost   : 286
+Shortest Route : 1 -> 3 -> 5 -> 14 -> 10 -> 13 -> 2 -> 4 -> 7 -> 6 -> 8 -> 11 -> 12 -> 15 -> 9 -> 1
