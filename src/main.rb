@@ -130,13 +130,18 @@ loop do
             else
                 nil
             end
+            tstr = Process.clock_gettime(Process::CLOCK_MONOTONIC)
             mcost , route = SolveDPTSP(data , start - 1)
+            tend = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+            time = ((tend - tstr) * 1000).round(2)
             display_route = route.map{|idx|(idx + 1)}
             puts("=============== Solver Result ===============")
             puts("Program Mode   : Keyboard Input")
-            puts("Minimum Cost   : #{mcost}")
+            puts("Execution Time : #{time} ms")
+            puts("Minimum Cost   : #{mcost} Cost")
             puts("Shortest Route : #{display_route.join(' -> ')}")
-            print("Apakah Anda Ingin Simpan Hasil Ke File? (Y / N) : ")
+            puts("=================================================================================")
+            print("Apakah Anda Ingin Simpan Hasil Ke File? (Y/N) : ")
             option = STDIN.gets&.strip
             if (option.downcase == "y") then
                 print("Masukkan Nama File Output Anda (TXT - example.txt) : ")
@@ -145,7 +150,7 @@ loop do
                     raise("Nama File Output Tidak Valid (Harus TXT & Tanpa Karakter Terlarang)")
                 end
                 output = "test/output/" + output_path
-                File.write(output , "=============== Solver Result ===============\nProgram Mode   : Keyboard Input\nMinimum Cost   : #{mcost}\nShortest Route : #{display_route.join(' -> ')}\n")
+                File.write(output , "=============== Solver Result ===============\nProgram Mode   : Keyboard Input\nExecution Time : #{time} ms\nMinimum Cost   : #{mcost} Cost\nShortest Route : #{display_route.join(' -> ')}\n")
                 puts("Success : File Result Disimpan Di #{output}.")
             elsif (option.downcase == "city") then
                 nil
@@ -192,14 +197,19 @@ loop do
             else
                 nil
             end
+            tstr = Process.clock_gettime(Process::CLOCK_MONOTONIC)
             mcost , route = SolveDPTSP(data , start - 1)
+            tend = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+            time = ((tend - tstr) * 1000).round(2)
             display_route = route.map{|idx|(idx + 1)}
             puts("=============== Solver Result ===============")
             puts("Program Mode   : File Input")
             puts("File Input     : #{input}")
-            puts("Minimum Cost   : #{mcost}")
+            puts("Execution Time : #{time} ms")
+            puts("Minimum Cost   : #{mcost} Cost")
             puts("Shortest Route : #{display_route.join(' -> ')}")
-            print("Simpan hasil ke file? (Y / N) : ")
+            puts("=================================================================================")
+            print("Simpan hasil ke file? (Y/N) : ")
             option = STDIN.gets&.strip
             if (option.downcase == "y") then
                 print("Masukkan Nama File Output Anda (TXT - example.txt) : ")
@@ -208,7 +218,7 @@ loop do
                     raise("Nama File Output Tidak Valid (Harus TXT & Tanpa Karakter Terlarang)")
                 end
                 output = "test/output/" + output_path
-                File.write(output , "=============== Solver Result ===============\nProgram Mode   : File Input\nFile Input     : #{input}\nMinimum Cost   : #{mcost}\nShortest Route : #{display_route.join(' -> ')}\n")
+                File.write(output , "=============== Solver Result ===============\nProgram Mode   : File Input\nFile Input     : #{input}\nExecution Time : #{time} ms\nMinimum Cost   : #{mcost} Cost\nShortest Route : #{display_route.join(' -> ')}\n")
                 puts("Success : File Result Disimpan Di #{output}.")
             elsif (option.downcase == "city") then
                 nil
