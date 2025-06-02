@@ -12,10 +12,10 @@
 # command , city_str , start_str , option , line : String
 # input , input_path , output , output_path : String
 # display_route , route , row : Array of Integer
+# mcost , tstr , tend , time : Float
 # data : Array of Array of Integer
 # lines : Array of String
 # start , city : Integer
-# mcost : Float
 
 # ALGORITMA - Required & Definition
 require "io/console"
